@@ -36,17 +36,24 @@
                 <form name="login-form">
                 <div class="email__container">
                         <img src="./assets/user.svg" class="user__img" alt="">
-                        <input type="text" placeholder="Username or email">
+                <!--Added username_or_email id -->
+                        <input type="text" placeholder="Username or email" id="username_or_email">
                     </div>
+                <!--Added error message div for username and style it to be none -->
+                     <div id="username_error_message"><span style='color:red'>Username can not be empty</span></div>
+
                     <div class="password__container">
                             <img src="./assets/lock.svg" class="user__img" alt="">
-                            <input type="password" placeholder="Password">
+                <!--Added password id -->
+                            <input type="password" placeholder="Password" id="password">
                         </div>
+                 <!--Added error message div for username and style it to be none -->
+                        <div id="password_error_message"><span style='color:red'>Password can not be empty</span></div>
                         <div class="help">
                             <a href="#">Remeber me</a>
                             <a href="#">Forgot Password?</a>
                         </div>
-                        <button type="submit" class="login__btn">Login</button>
+                        <button type="submit" class="login__btn" id="btn">Login</button>
                         <p>Don't have an account? <a href="#" class="register__link">&nbsp; Click here</a></p>
                 </form>
                 </div>
@@ -54,5 +61,6 @@
         </div>
     </div>
 </div>
+<script src="main.js"></script>
 </body>
 </html>
