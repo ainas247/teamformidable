@@ -196,4 +196,8 @@ label{
 }
 #register-input::placeholder{
     font-family: 'Lato' !important;
-}
+
+    /* media query */
+}@media  only screen and (max-width: 600px) {
+
+  }
