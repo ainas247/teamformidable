@@ -33,7 +33,7 @@
                 <!--Form wrapper
                 =============================-->
             <div class="form__wrapper">
-                <form name="login-form">
+                <form name="login-form" class="login__form">
                 <div class="email__container">
                         <img src="./assets/user.svg" class="user__img" alt="">
                 <!--Added username_or_email id and add required-->
@@ -54,8 +54,30 @@
                             <a href="#">Forgot Password?</a>
                         </div>
                         <button type="submit" class="login__btn" id="btn">Login</button>
-                        <p>Don't have an account? <a href="#" class="register__link">&nbsp; Click here</a></p>
+                        <p>Don't have an account? <a href="#" class="register__link" onclick="toggleSignup()">&nbsp; Click here</a></p>
                 </form>
+                <!--End of Login Form
+                =============================-->
+                <!--Register Form
+                =============================-->
+               <div class="register__form">
+                   <h3>Create A Free Account Today!</h3>
+                <form id="registe-form">
+                    <label for="name">Name *</label>
+                    <input type="text" id="register-input" required>
+
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="register-input" required>
+
+                    <label for="username">Username *</label>
+                    <input type="text" id="register-input" required>
+
+                    <label for="password">Password *</label>
+                    <input type="password" id="register-input" required>
+                    <button type="submit" class="login__btn" id="btn">Sign Up</button>
+                    <p>Have an account with us? <a href="" class="register__link" onclick="toggleLogin">Login</a></p>
+                </form>
+               </div>
                 </div>
             </div>
         </div>
