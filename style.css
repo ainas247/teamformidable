@@ -31,19 +31,29 @@ body::before{
 }
 /*Main wrapper grid*/
 .main__wrapper__content{
-    display: grid;
-    grid-template-columns: 500px 500px;
-    grid-gap: 20px;
+    /* EMA I comment this is out since its giving me issue so I Seperated the DIV Below */
+    /* display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 20px; */
     padding-top: 2rem;
     position: relative;
 }
 /*Wrapper Image*/
 .wrapper__img{
-    width: 600px;
+    width: 100%;
     height: 500px;
     margin-top: 10%;
 }
+/* I added main wrapper gave it with and float it left */
+.main__wrapper--left{
+    float: left;
+    width: 50%;
+}
 
+/*Wrapper Image*/
+.wrapper__img img{
+    width: 100%;
+}
 /*Box shadow for the container holding the form and the heading*/
 .main__wrapper--right{
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, .15);
@@ -53,6 +63,9 @@ body::before{
     padding-bottom: 3rem;
     border-radius: 4px;
     background: #fff;
+    /* I gave this div with and float it right with 50% width size */
+    width: 50%;
+    float: right;
 }
 /*Heading -- the logo text and image to the right*/
 .heading{
@@ -198,6 +211,12 @@ label{
     font-family: 'Lato' !important;
 
     /* media query */
-}@media  only screen and (max-width: 600px) {
-
+    /* I changed the screen to be responsive and hide the image div */
+}@media  only screen and (max-width: 800px) {
+    .main__wrapper--left{
+        display: none;
+    }
+    .main__wrapper--right{
+        width: 100%;
+    }
   }
