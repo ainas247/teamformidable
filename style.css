@@ -1,0 +1,203 @@
+/* Styles to remove default css */
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden !important;
+    font-family: 'Lato', sans-serif;
+}
+body::before{
+    content: '';
+    background: #F6FAFB;
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    bottom: 0 !important;
+    transform:skewY(-3deg)
+}
+/*Main wrapper*/
+.main__wrapper{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+/*Container*/
+.container{
+    margin: 0 auto;
+    width: 80%;
+}
+/*Main wrapper grid*/
+.main__wrapper__content{
+    display: grid;
+    grid-template-columns: 500px 500px;
+    grid-gap: 20px;
+    padding-top: 2rem;
+    position: relative;
+}
+/*Wrapper Image*/
+.wrapper__img{
+    width: 600px;
+    height: 500px;
+    margin-top: 10%;
+}
+
+/*Box shadow for the container holding the form and the heading*/
+.main__wrapper--right{
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, .15);
+    padding-top: 5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 3rem;
+    border-radius: 4px;
+    background: #fff;
+}
+/*Heading -- the logo text and image to the right*/
+.heading{
+    display: flex; 
+    padding: 0 4rem;
+}
+/*Logo -img*/
+.logo__img{
+    height: auto;
+    max-width: 70px;
+    padding-right: 20px;
+}
+/*Logo text*/
+.logo__text{
+    font-weight: bold;
+    color:#22276A;
+}
+/*Form wrapper*/
+.form__wrapper{
+    /* margin-top: 2rem; */
+    max-width: 90%;
+}
+/*Input styles*/
+input[type=text], input[type=password]{
+    width: 100%;
+    
+}
+.email__container, .password__container{
+    position: relative;
+    margin-top: 3rem;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+}
+.user__img{
+    width: 20px;
+    height: auto;
+    padding-bottom: 1rem;
+}
+.login__form input[type=text], input[type=password]{
+   border: none;
+   outline: none;
+   padding-left: 1rem;
+   padding-bottom: 1rem;
+   color:#333;
+   opacity: .5;
+   font-size: 1.2rem;
+}
+/* input[type=text]::placeholder{
+    
+} */
+.help{
+    display: flex;
+    justify-content: space-between;
+}
+a{
+    text-decoration: none;
+    color:#3666D6;
+    font-family: 'Lato';
+    font-size: 1rem;
+    padding-top: 1rem;
+}
+p{
+    padding-top: .95rem;
+    color:#3666D6;
+    font-family: 'Lato';
+    font-size: 1rem;
+    text-align: center;
+;}
+/*Login Button*/
+.login__btn{
+    background:#3666D6;
+    color:#fff;
+    border: none;
+    padding: .9rem 2rem;
+    text-align: center;
+    width: 100%;
+    border-radius: 4px;
+    font-family: 'Lato' !important;
+    margin-top: 2rem;
+    cursor: pointer;
+    font-size: 17px;
+}
+/*Register link*/
+.register__link{
+    font-weight: bold;
+}
+
+/*Frame Images -svgs around the border*/
+.plant1{
+    position: absolute;
+    top: 0;
+    height: 5rem;
+    z-index: 2;
+}
+.plant2{
+    position: absolute;
+    top: 0;
+    height: 5rem;
+    z-index: 2;
+    right: 0;
+}
+.plant3{
+    position: absolute;
+    height: 5rem;
+    z-index: 2;
+    left: 0;
+    bottom: 0;
+}
+.plant4{
+    position: absolute;
+    height: 5rem;
+    z-index: 2;
+    right: 0; 
+    bottom: 0;
+}
+
+
+/*Register Form Styles*/
+/* .register-form input[type=text], input[type=email], input[type=password]{
+    border: 1px solid red !important;
+} */
+.register__form h3{
+    text-align: center;
+    font-family: 'Lato';
+    padding-bottom: 1rem;
+    padding-top: 2rem;
+    color:#3666D6;
+}
+label{
+    font-family: 'Lato';
+    font-size: 1rem;
+    color:#242424;
+    /* padding-top: 2rem; */
+}
+#register-input{
+    border:none;
+    width: 100%;
+    height: 3rem;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+}
+#register-input::placeholder{
+    font-family: 'Lato' !important;
+
+    /* media query */
+}@media  only screen and (max-width: 600px) {
+
+  }
