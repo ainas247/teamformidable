@@ -31,19 +31,29 @@ body::before{
 }
 /*Main wrapper grid*/
 .main__wrapper__content{
-    display: grid;
-    grid-template-columns: 500px 500px;
-    grid-gap: 20px;
+    /* EMA I comment this is out since its giving me issue so I Seperated the DIV Bellow */
+    /* display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 20px; */
     padding-top: 2rem;
     position: relative;
 }
 /*Wrapper Image*/
 .wrapper__img{
-    width: 600px;
+    width: 100%;
     height: 500px;
     margin-top: 10%;
 }
+/* I added main wrapper gave it with and float it left */
+.main__wrapper--left{
+    float: left;
+    width: 50%;
+}
 
+/*Wrapper Image*/
+.wrapper__img img{
+    width: 100%;
+}
 /*Box shadow for the container holding the form and the heading*/
 .main__wrapper--right{
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, .15);
@@ -53,6 +63,9 @@ body::before{
     padding-bottom: 3rem;
     border-radius: 4px;
     background: #fff;
+    /* I gave this div with and float it right with 50% width size */
+    width: 50%;
+    float: right;
 }
 /*Heading -- the logo text and image to the right*/
 .heading{
@@ -91,7 +104,7 @@ input[type=text], input[type=password]{
     height: auto;
     padding-bottom: 1rem;
 }
-input[type=text], input[type=password]{
+.login__form input[type=text], input[type=password]{
    border: none;
    outline: none;
    padding-left: 1rem;
@@ -111,14 +124,14 @@ a{
     text-decoration: none;
     color:#3666D6;
     font-family: 'Lato';
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding-top: 1rem;
 }
 p{
-    padding-top: 1.2rem;
+    padding-top: .95rem;
     color:#3666D6;
     font-family: 'Lato';
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;
 ;}
 /*Login Button*/
@@ -126,14 +139,14 @@ p{
     background:#3666D6;
     color:#fff;
     border: none;
-    padding: 1rem 2rem;
+    padding: .9rem 2rem;
     text-align: center;
     width: 100%;
-    border-radius: 6px;
+    border-radius: 4px;
     font-family: 'Lato' !important;
     margin-top: 2rem;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 17px;
 }
 /*Register link*/
 .register__link{
@@ -165,7 +178,57 @@ p{
     position: absolute;
     height: 5rem;
     z-index: 2;
-    right: 0;
+    right: 0; 
     bottom: 0;
 }
 
+
+/*Register Form Styles*/
+/* .register-form input[type=text], input[type=email], input[type=password]{
+    border: 1px solid red !important;
+} */
+.register__form h3{
+    text-align: center;
+    font-family: 'Lato';
+    padding-bottom: 1rem;
+    padding-top: 2rem;
+    color:#3666D6;
+}
+label{
+    font-family: 'Lato';
+    font-size: 1rem;
+    color:#242424;
+    /* padding-top: 2rem; */
+}
+#register-input{
+    border:none;
+    width: 100%;
+    height: 3rem;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+}
+#register-input::placeholder{
+    font-family: 'Lato' !important;
+
+    /* media query */
+}
+@media  only screen and (max-width: 1000px) {
+    .main__wrapper--left{
+        display: none;
+    }
+    .main__wrapper--right{
+        width: 100%;
+    }
+    .heading{
+       text-align: center;
+       padding-left: 20%;
+  
+    }
+  }
+@media  only screen and (max-width: 500px) {
+   .heading{
+       text-align: center;
+       padding-left: 10%;
+  
+    }
+}

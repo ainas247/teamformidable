@@ -19,13 +19,13 @@
     <div class="container">
         <div class="main__wrapper__content">
             <div class="main__wrapper--left">
-                <img src="./assets/banner.png" class="wrapper__img" alt="">
+                <img src="./assets/banner.png" class="wrapper__img" alt="image of a woman and a boy travelling">
             </div>
             <div class="main__wrapper--right">
                 <!--Heading for the Logo 
                 ============================-->
                 <div class="heading">
-                    <img src="./assets/logo.svg" class="logo__img" alt="">
+                    <img src="./assets/logo.svg" class="logo__img" alt="aeroplane image">
                     <h1 class="logo__text">Welcome <br > to Travel Blog</h1>
                 </div>
                 <!--Logo ends here
@@ -33,26 +33,56 @@
                 <!--Form wrapper
                 =============================-->
             <div class="form__wrapper">
-                <form name="login-form">
+                <form name="login-form" class="login__form">
                 <div class="email__container">
                         <img src="./assets/user.svg" class="user__img" alt="">
-                        <input type="text" placeholder="Username or email">
+                <!--Added username_or_email id and add required-->
+                        <input type="text" placeholder="Username or email" id="username_or_email" required>
                     </div>
+                <!--Added error message div for username and style it to be none -->
+                     <div id="username_error_message"><span style='color:red'>Username can not be empty</span></div>
+
                     <div class="password__container">
                             <img src="./assets/lock.svg" class="user__img" alt="">
-                            <input type="password" placeholder="Password">
+                <!--Added password id and add required-->
+                            <input type="password" placeholder="Password" id="password" required>
                         </div>
+                 <!--Added error message div for username and style it to be none -->
+                        <div id="password_error_message"><span style='color:red'>Password can not be empty</span></div>
                         <div class="help">
                             <a href="#">Remeber me</a>
                             <a href="#">Forgot Password?</a>
                         </div>
-                        <button type="submit" class="login__btn">Login</button>
-                        <p>Don't have an account? <a href="#" class="register__link">&nbsp; Click here</a></p>
+                        <button type="submit" class="login__btn" id="btn">Login</button>
+                        <p>Don't have an account? <a href="#" class="register__link" onclick="toggleSignup()">&nbsp; Click here</a></p>
                 </form>
+                <!--End of Login Form
+                =============================-->
+                <!--Register Form
+                =============================-->
+               <div class="register__form">
+                   <h3>Create A Free Account Today!</h3>
+                <form id="registe-form">
+                    <label for="name">Name *</label>
+                    <input type="text" id="register-input" required>
+
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="register-input" required>
+
+                    <label for="username">Username *</label>
+                    <input type="text" id="register-input" required>
+
+                    <label for="password">Password *</label>
+                    <input type="password" id="register-input" required>
+                    <button type="submit" class="login__btn" id="btn">Sign Up</button>
+                    <p>Have an account with us? <a href="" class="register__link" onclick="toggleLogin">Login</a></p>
+                </form>
+               </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<script src="main.js"></script>
 </body>
 </html>
