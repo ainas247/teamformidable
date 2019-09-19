@@ -31,7 +31,7 @@ body::before{
 }
 /*Main wrapper grid*/
 .main__wrapper__content{
-    /* EMA I comment this is out since its giving me issue so I Seperated the DIV Below */
+    /* EMA I comment this is out since its giving me issue so I Seperated the DIV Bellow */
     /* display: grid;
     grid-template-columns: 50% 50%;
     grid-gap: 20px; */
@@ -153,7 +153,7 @@ p{
     font-weight: bold;
 }
 
-/*Frame Images svgs around the border*/
+/*Frame Images -svgs around the border*/
 .plant1{
     position: absolute;
     top: 0;
@@ -211,12 +211,24 @@ label{
     font-family: 'Lato' !important;
 
     /* media query */
-    /* I changed the screen to be responsive and hide the image div */
-}@media  only screen and (max-width: 800px) {
+}
+@media  only screen and (max-width: 1000px) {
     .main__wrapper--left{
         display: none;
     }
     .main__wrapper--right{
         width: 100%;
     }
+    .heading{
+       text-align: center;
+       padding-left: 20%;
+  
+    }
   }
+@media  only screen and (max-width: 500px) {
+   .heading{
+       text-align: center;
+       padding-left: 10%;
+  
+    }
+}
